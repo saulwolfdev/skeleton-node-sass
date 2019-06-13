@@ -1,0 +1,8 @@
+body{
+    background-color:grayscale;
+     @include media-queries(extra-small){background-color:red;}
+     @include media-queries(small){background-color:yellow;}
+     @include media-queries(medium){background-color:purple;}
+     @include media-queries(large){background-color:orange;}
+      @include media-queries(extra-large){background-color:green;}
+}
