@@ -1,9 +1,9 @@
 
-// import "rellax";
-import tplHome from "../html/Home.tpl.html";
+import tplHome from "../html/home.tpl.html";
 const routes=()=>{
+
     const data =document,
-    main=data.querySelector(".main")
+    main=data.querySelector(".Main")
     data.addEventListener("DOMContentLoaded",e=>{
         e.preventDefault()
         main.innerHTML=tplHome;
