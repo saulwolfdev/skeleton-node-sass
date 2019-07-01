@@ -47,9 +47,9 @@ $roboto-sans: 'Roboto', sans-serif;
   }
 
   $breakpoints: (
-    extra-small: 30em, /* 480 / 16  */
-    small: 37.5em, /* 600 / 16  */
-    medium: 45em, /* 720 / 16 */
-    large: 64em, /* 1024 / 16 */
-    extra-large: 75em /* 1200/ 16 */
+    x-small: 320px, /* 480 / 16  */
+    small: 500px, /* 600 / 16  */
+    medium: 900px, /* 720 / 16 */
+    large: 1200px, /* 1024 / 16 */
+    x-large: 1920px /* 1200/ 16 */
   );
