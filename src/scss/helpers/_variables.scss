@@ -53,3 +53,8 @@ $roboto-sans: 'Roboto', sans-serif;
     large: 64em, /* 1024 / 16 */
     extra-large: 75em /* 1200/ 16 */
   );
+  //typography
+$min-width: 320px;
+$max-width: 1920px;
+$min-font:12px;
+$max-font: 28px;
