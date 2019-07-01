@@ -1,58 +1,149 @@
-.Banner{
-    display: grid;
-    display: grid;
-    height: 100vh;
-    grid-gap: 20px;
-    grid-template-areas: "img img img"
-                        "img img img"
-                        "img img img";
-    grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 2fr 5fr 1fr;
+.Grid {
+	width: 100%;
+	margin: 0 auto;
+	border: 1px solid red;
+	display: grid;
+	grid-template-columns: 2% 1fr 2% 1fr 2%;
+	grid-template-rows: 20% 1fr 1fr 2%;
+	height: 800px;
+	&_Banner {
+		
+		grid-column: 1/6;
+		&_Img {
+			display: block;
+			width: 100%;
+		}
+	}
+	&_Entrada {
+		grid-column: 2/3;
+		grid-row: 2/4;
+		border: 1px solid blue;
 
-    &_Img{
-        grid-area: "img";
-        width: 100%;
-    }
-    // &_Buscador{
-    //     background-color: rgb(80, 4, 4);
-    //     grid-area: "buscador";
-    //     &_Title{
-    //         text-align: center;
-    //     }
-    //     &_Input{
-    //         text-align: center;
-    //         height: 40px;
-    //     }
-    // }
+		@include media-queries(x-small) {
+				    grid-column: 2/5;
+				    grid-row: 2/3;
+		}
+
+		@include media-queries(large) {
+				grid-column: 2/3;
+				 grid-row: 2/4;
+		}
+	}
+
+	&_Bandeja {
+		grid-column: 4/5;
+		grid-row: 2/4;
+			border: 1px solid rgb(18, 158, 111);
+		@include media-queries(x-small) {
+			grid-column: 2/5;
+			grid-row:3/4;
+		}
+
+		@include media-queries(large) {
+			    grid-column: 4/5;
+			    grid-row: 2/4;
+			 
+		}
+	}
+	@include media-queries(x-small) {
+	grid-template-rows: 15% 1fr 1fr 2%;
+	}
+		@include media-queries(small) {
+		grid-template-rows: 15% 1fr 1fr 2%;
+		}
+	@include media-queries(medium) {
+		grid-template-rows: 30% 1fr 1fr 2%;
+	}
+	@include media-queries(large) {
+		grid-template-rows: 50% 1fr 1fr 2%;
+	}
+	@include media-queries(x-large) {
+		grid-template-rows: 50% 1fr 1fr 2%;
+	}
 }
-// .Banner_Main{
-//     display: grid;
-//     height: 100vh;
-//     grid-template-columns: 1fr 2fr 1fr;
-//    grid-template-rows: 1fr 5fr 1fr;
-//     grid-template-areas:
-//         "img img img"
-//         "img buscador img"
-//         "img img img";
-  
-//         &_Img{
-//           grid-area:"img";
-//         }
-//         &_Buscador{
-//           grid-area: "buscador";
-//         }
-//   }
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    grid-auto-rows: 200px;
-    grid-template-areas: 
-      ". a a ."
-      ". a a .";
-  }
-  .item1 {
-    grid-area: a;
-    align-self: center;
-    justify-self: center;
-  }
+
+.Main {
+	padding: 0 8px;
+	margin: 0;
+	width: 100%;
+	margin: 0 auto;
+	border: 1px solid red;
+	display: grid;
+	grid-template-columns: 2% 1fr 2% 1fr 2%;
+	height: 100%;
+
+	&_Banner {
+		grid-column: 1/6;
+	}
+
+	&_Entrada {
+		grid-column: 2/5;
+		grid-row: 2/3;
+		border: 1px solid blue;
+		position: relative;
+
+		@include ms-screen-md-up {
+			grid-column: 2/5;
+			grid-row: 2/3;
+
+		}
+
+		@include ms-screen-lg-up {
+			grid-column: 2/5;
+			grid-row: 2/3;
+		}
+
+		@include ms-screen-xl-up {
+			grid-column: 2/3;
+			grid-row: 2/4;
+		}
+
+		@include ms-screen-xxl-up {
+			grid-column: 2/3;
+			grid-row: 2/4;
+		}
+	}
+
+	&_Bandeja {
+		grid-column: 2/5;
+		grid-row: 3/4;
+		border: 1px solid rgb(18, 158, 111);
+		position: relative;
+
+		@include ms-screen-md-up {
+			grid-column: 2/5;
+			grid-row: 3/4;
+		}
+
+		@include ms-screen-lg-up {
+			grid-column: 2/5;
+			grid-row: 3/4;
+		}
+
+		@include ms-screen-xl-up {
+			grid-column: 4/5;
+			grid-row: 2/4;
+		}
+
+		@include ms-screen-xxl-up {
+			grid-column: 4/5;
+			grid-row: 2/4;
+		}
+	}
+
+	@include ms-screen-md-up {
+		grid-template-rows: 15% 1fr 1fr 2%;
+	}
+
+	@include ms-screen-lg-up {
+		grid-template-rows: 30% 1fr 1fr 2%;
+	}
+
+	@include ms-screen-xl-up {
+		grid-template-rows: 35% 1fr 1fr 2%;
+	}
+
+	@include ms-screen-xxl-up {
+		grid-template-rows: 35% 1fr 1fr 2%;
+	}
+}
